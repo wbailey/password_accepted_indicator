@@ -1,7 +1,3 @@
-require 'password_accepted_indicator'
-
-ActionView::Base.class_eval do
-  include PasswordAcceptedInidicatorHelper
-end
+ActionView::Base.send :include, PasswordAcceptedInidicatorHelper
 
 ActionView::Helpers::AssetTagHelper.register_javascript_include_default 'password_accepted_indicator'
