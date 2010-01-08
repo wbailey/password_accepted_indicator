@@ -1,6 +1,7 @@
 module PasswordAcceptedIndicatorHelper
   def password_accepted_indicator( name, target, options = { } )
-    width = options.has_key?( :width ) ? option[:width] : 40
+    width = options.has_key?( :width ) ? option[:width] : '20px'
+
     return <<-EOF
     <div id="#{name}" class="password_accepted_indicator">
       <div id="#{name + '_indicator_box'}" class="box_container" style="width: #{width}">&nbsp;</div>
